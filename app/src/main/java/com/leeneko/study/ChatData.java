@@ -1,18 +1,15 @@
 package com.leeneko.study;
 
 class ChatData {
-    private String title;
-    private String cont;
-    public ChatData(String title, String cont) {
-        this.title = title;
-        this.cont = cont;
+    private String id;
+    private String otherMsg;
+    private String myMsg;
+    public ChatData(String id, String otherMsg, String myMsg) {
+        this.id = id;
+        this.otherMsg = otherMsg;
+        this.myMsg = myMsg;
     }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getCont() {
-        return cont;
-    }
+    public String getId() { return id; }
+    public String getOtherMsg() { return otherMsg; }
+    public String getMyMsg() { return myMsg; }
 }

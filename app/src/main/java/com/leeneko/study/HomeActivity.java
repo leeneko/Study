@@ -27,7 +27,9 @@ public class HomeActivity extends AppCompatActivity {
         btnActs.put("Image", ImageActivity.class);
         btnActs.put("Intent", SubActivity.class);
         btnActs.put("ListView", ListActivity.class);
-        btnActs.put("Custom ListView", ChatActivity.class);
+        btnActs.put("Custom List, Handler", LoginActivity.class);
+        btnActs.put("Count Handler", HandlerActivity.class);
+        btnActs.put("DownLoad", WebActivity.class);
 
         final List<String> arData = new ArrayList<>();
         for (String key: btnActs.keySet()) {

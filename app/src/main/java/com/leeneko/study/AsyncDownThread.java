@@ -3,12 +3,10 @@ package com.leeneko.study;
 import android.os.Handler;
 import android.os.Message;
 import android.os.NetworkOnMainThreadException;
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
 import java.net.URL;
-
 import javax.net.ssl.HttpsURLConnection;
 
 public class AsyncDownThread extends Thread {
@@ -53,7 +51,6 @@ public class AsyncDownThread extends Thread {
         } catch (Exception e) {
             return "Error : " + e.getMessage();
         }
-
         return html.toString();
     }
 

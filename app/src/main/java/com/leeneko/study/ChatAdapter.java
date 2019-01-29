@@ -30,13 +30,17 @@ class ChatAdapter extends BaseAdapter {
         if (convertView == null) {
             convertView = mInflater.inflate(mLayout, parent, false);
         }
-        TextView tvTitle = convertView.findViewById(R.id.tvTitle);
-        TextView tvCont = convertView.findViewById(R.id.tvCont);
+        TextView tvId = convertView.findViewById(R.id.tvId);
+        TextView tvOther = convertView.findViewById(R.id.tvOther);
+        TextView tvMy = convertView.findViewById(R.id.tvMy);
 
         // ChatData item = mitems.get(position);
         // tvTitle.setText( item.getTitle() );
-        tvTitle.setText(mItems.get(position).getTitle());
-        tvCont.setText(mItems.get(position).getCont());
+        // tvId.setText(mItems.get(position).getTitle());
+
+        tvId.setText( mItems.get(position).getId() );
+        tvOther.setText( mItems.get(position).getOtherMsg() );
+        tvMy.setText( mItems.get(position).getMyMsg() );
 
         return convertView;
     }
