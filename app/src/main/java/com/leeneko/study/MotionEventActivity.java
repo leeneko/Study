@@ -3,6 +3,7 @@ package com.leeneko.study;
 import android.support.constraint.ConstraintLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
@@ -29,6 +30,7 @@ public class MotionEventActivity extends AppCompatActivity {
 
         ConstraintLayout myLayout = findViewById(R.id.LayoutBg);
         myLayout.setOnTouchListener(new View.OnTouchListener() {
+
             @Override
             public boolean onTouch(View v, MotionEvent event) {
                 handleTouch(event);
@@ -40,6 +42,7 @@ public class MotionEventActivity extends AppCompatActivity {
                 TextView tv2 = findViewById(R.id.tvTwo);
 
                 int pointerCount = event.getPointerCount();
+                // Log.d("ptCount", String.valueOf(pointerCount)); // 1 or 2
 
                 for (int i = 0; i < pointerCount; i++) {
                     int x = (int) event.getX(i);
