@@ -31,6 +31,7 @@ public class HomeActivity extends AppCompatActivity {
         btnActs.put("Count Handler", HandlerActivity.class);
         btnActs.put("DownLoad", WebActivity.class);
         btnActs.put("Touch Event", MotionEventActivity.class);
+        btnActs.put("Fragment", FragmentExampleActivity.class);
 
         final List<String> arData = new ArrayList<>();
         for (String key: btnActs.keySet()) {

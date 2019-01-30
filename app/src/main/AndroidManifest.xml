@@ -12,7 +12,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MotionEventActivity"></activity>
+        <activity android:name=".FragmentExampleActivity"></activity>
+        <activity android:name=".MotionEventActivity" />
         <activity android:name=".WebActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".HandlerActivity" />

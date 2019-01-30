@@ -2,32 +2,31 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/LayoutBg"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MotionEventActivity">
+    tools:context=".FragmentExampleActivity">
 
-    <TextView
-        android:id="@+id/tvOne"
-        android:layout_width="wrap_content"
+    <fragment
+        android:id="@+id/fragmentToolbar"
+        android:name="com.leeneko.study.ToolbarFragment"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvTwo"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+    <fragment
+        android:id="@+id/fragmentText"
+        android:name="com.leeneko.study.TextFragment"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
-        android:text="TextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvOne" />
+        app:layout_constraintTop_toBottomOf="@+id/fragmentToolbar" />
 </android.support.constraint.ConstraintLayout>
