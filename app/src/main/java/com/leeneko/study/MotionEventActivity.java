@@ -21,6 +21,12 @@ public class MotionEventActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_motion_event);
 
+        mEvent.put(MotionEvent.ACTION_DOWN, "DOWN");
+        mEvent.put(MotionEvent.ACTION_UP, "UP");
+        mEvent.put(MotionEvent.ACTION_POINTER_DOWN, "PNTR DOWN");
+        mEvent.put(MotionEvent.ACTION_POINTER_UP, "PNTR UP");
+        mEvent.put(MotionEvent.ACTION_MOVE, "MOVE");
+
         ConstraintLayout myLayout = findViewById(R.id.LayoutBg);
         myLayout.setOnTouchListener(new View.OnTouchListener() {
             @Override
@@ -41,41 +47,9 @@ public class MotionEventActivity extends AppCompatActivity {
                     int id = event.getPointerId(i);
                     int action = event.getActionMasked();
                     int actionIndex = event.getActionIndex();
-                    String actionString;
 
-                    mEvent.put(MotionEvent.ACTION_DOWN, "DOWN");
-                    mEvent.put(MotionEvent.ACTION_UP, "UP");
-                    mEvent.put(MotionEvent.ACTION_POINTER_DOWN, "PNTR DOWN");
-                    mEvent.put(MotionEvent.ACTION_POINTER_UP, "PNTR UP");
-                    mEvent.put(MotionEvent.ACTION_MOVE, "MOVE");
-
-                    List<Integer> arData = new ArrayList<>();
-                    for (Integer key: mEvent.keySet()) {
-                        arData.add(key);
-                    }
-
-                    switch (action) {
-                        case MotionEvent.ACTION_DOWN:
-                            actionString = "DOWN";
-                            break;
-                        case MotionEvent.ACTION_UP:
-                            actionString = "UP";
-                            break;
-                        case MotionEvent.ACTION_POINTER_DOWN:
-                            actionString = "PNTR DOWN";
-                            break;
-                        case MotionEvent.ACTION_POINTER_UP:
-                            actionString = "PNTR UP";
-                            break;
-                        case MotionEvent.ACTION_MOVE:
-                            actionString = "MOVE";
-                            break;
-                        default:
-                            actionString = "";
-                    }
-
-                    String touchStatus = "Action: " + actionString + " Index: " + actionIndex + " ID: " + id + " X: " + x + " Y: " + y;
-                    // String touchStatus = String.format("Action : %s Index: %d ID: %d X: %d Y: %d", actionString, actionIndex, id, x, y);
+                    // String touchStatus = "Action: " + arData.get(action) + " Index: " + actionIndex + " ID: " + id + " X: " + x + " Y: " + y;
+                    String touchStatus = String.format("Action : %s Index: %d ID: %d X: %d Y: %d", mEvent.get(action), actionIndex, id, x, y);
 
                     if (id == 0)
                         tv1.setText(touchStatus);
