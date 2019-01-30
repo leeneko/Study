@@ -30,6 +30,7 @@ public class HomeActivity extends AppCompatActivity {
         btnActs.put("Custom List, Handler", LoginActivity.class);
         btnActs.put("Count Handler", HandlerActivity.class);
         btnActs.put("DownLoad", WebActivity.class);
+        btnActs.put("Touch Event", MotionEventActivity.class);
 
         final List<String> arData = new ArrayList<>();
         for (String key: btnActs.keySet()) {
