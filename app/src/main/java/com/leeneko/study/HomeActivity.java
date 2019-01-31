@@ -3,6 +3,7 @@ package com.leeneko.study;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -32,6 +33,8 @@ public class HomeActivity extends AppCompatActivity {
         btnActs.put("DownLoad", WebActivity.class);
         btnActs.put("Touch Event", MotionEventActivity.class);
         btnActs.put("Fragment", FragmentExampleActivity.class);
+        btnActs.put("UI", BasicActivity.class);
+        btnActs.put("Menu", MenuActivity.class);
 
         final List<String> arData = new ArrayList<>();
         for (String key: btnActs.keySet()) {
