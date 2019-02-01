@@ -35,6 +35,8 @@ public class HomeActivity extends AppCompatActivity {
         btnActs.put("Fragment", FragmentExampleActivity.class);
         btnActs.put("UI", BasicActivity.class);
         btnActs.put("Menu", MenuActivity.class);
+        btnActs.put("Sensor", SensorActivity.class);
+        btnActs.put("DaumMap", DaumMapActivity.class);
 
         final List<String> arData = new ArrayList<>();
         for (String key: btnActs.keySet()) {
